@@ -195,6 +195,9 @@ const Ccp = () => {
             connectUrl + "/connect/ccp-v2/", { 
                 ccpParams: { 
                     region: process.env.REACT_APP_CONNECT_REGION,
+                    softphone: {                    // optional, defaults below apply if not provided
+                        disableRingtone: true,       // optional, defaults to false
+                      },
                     pageOptions: {                  // optional
                         enableAudioDeviceSettings: true, // optional, defaults to 'false'
                         enablePhoneTypeSettings: true // optional, defaults to 'true'
